@@ -1,0 +1,17 @@
+{
+  "name": "test",
+  "version": "1.0.1",
+  "type": "module",
+  "description": "asdsad",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Myself",
+  "license": "MIT",
+  "dependencies": {
+    "@brunolnetto/node-link": "^1.0.1",
+    "nodemon": "^2.0.15"
+  }
+}
