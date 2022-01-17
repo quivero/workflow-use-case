@@ -1,4 +1,4 @@
-# Library ```node-link``` use case
+# Library ```dot-quiver``` use case
 
 This an use case of library [node-link](https://github.com/brunolnetto/node-link). It is a NodeJS application. Hence, to start it, you might:
 
