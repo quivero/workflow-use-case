@@ -3,10 +3,9 @@ import express from 'express'
 import { createRequire } from "module";
 import fs from 'fs'
 
-import Graph from '@brunolnetto/node-link/src/data-structures/graph/Graph.js'
-import GraphVertex from '@brunolnetto/node-link/src/data-structures/graph/GraphVertex.js'
-import GraphEdge from '@brunolnetto/node-link/src/data-structures/graph/GraphEdge.js'
-import { parseBlueprintToGraph } from '@brunolnetto/node-link/src/utils/workflow/parsers.js'
+import Graph from 'dot-quiver/src/data-structures/graph/Graph.js'
+import GraphVertex from 'dot-quiver/src/data-structures/graph/GraphVertex.js'
+import GraphEdge from 'dot-quiver/src/data-structures/graph/GraphEdge.js'
 
 const require = createRequire(import.meta.url);
 const app = express();
