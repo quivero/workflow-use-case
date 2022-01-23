@@ -26,6 +26,7 @@ app.get('/', (req, res) => {
   let bps_root = './samples/blueprints/';
   let blueprints_fnames = fs.readdirSync(bps_root);
   
+  // Change to true  VVVVV to describe all blueprints on path samples/blueprints/
   let READ_ALL_BPS = false;
   let blueprint_fname = 'DemandasEspontaneas.json'
 
