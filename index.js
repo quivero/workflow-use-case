@@ -1,11 +1,8 @@
 // [START app]
 import express from 'express'
 import { createRequire } from "module";
-import fs from 'fs'
 
-import Graph from 'dot-quiver/src/data-structures/graph/Graph.js'
-import GraphVertex from 'dot-quiver/src/data-structures/graph/GraphVertex.js'
-import GraphEdge from 'dot-quiver/src/data-structures/graph/GraphEdge.js'
+import parseBlueprintToGraph from 'dot-quiver/utils/workflow/parsers.js'
 
 const require = createRequire(import.meta.url);
 const app = express();
@@ -26,31 +23,35 @@ app.get('/', (req, res) => {
   // Driver program
   // Create a sample graph
   
-    
-  // A directed graph
-  let graph_ = new Graph(true);
-
-  // Nodes
-  let A = new GraphVertex('A');
-  let B = new GraphVertex('B');
-  let C = new GraphVertex('C');
-  let D = new GraphVertex('D');
-  let E = new GraphVertex('E');
-  let F = new GraphVertex('F');
-
-  // Vertices
-  let AB = new GraphEdge(A, B);
-  let BC = new GraphEdge(B, C);
-  let CD = new GraphEdge(C, D);
-  let CE = new GraphEdge(C, E);
-  let EB = new GraphEdge(E, B);
-  let CF = new GraphEdge(C, F);
-  let FB = new GraphEdge(F, B);
-
-  // Add edges
-  graph_.addEdges([AB, BC, CD, CE, EB, CF, FB]);
-
-  res.send(graph_.describe());
+  let bps_root = './samples/blueprints/';
+  let blueprints_fnames = fs.readdirSync(bps_root);
   
+  let READ_ALL_BPS = false;
+  let blueprint_fname = 'DemandasEspontaneas.json'
+
+  let graphs = []
+  let descriptions = []
+
+  if(READ_ALL_BPS){
+      for(let i=0; i<blueprints_fnames.length; i++){
+          let fname = bps_root+blueprints_fnames[i];
+          let blueprint_i = require(fname);
+          
+          let graph_i = parseBlueprintToGraph(blueprint_i);
+          
+          graphs.push(graph_i);
+          descriptions.push(graph_i.describe());
+      }
+
+      res.send(descriptions);
+
+  } else {
+      let fname = bps_root+blueprint_fname;
+      let blueprint_i = require(fname);
+      
+      let graph = parseBlueprintToGraph(blueprint_i);
+    
+      res.send(graph.describe());
+  }
 });
 // [END app]

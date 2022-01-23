@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "dot-quiver": "^3.0.1",
+    "es-iter": "^1.1.2",
     "express": "^4.17.2",
     "fs": "^0.0.1-security",
     "nodemon": "^2.0.15"
