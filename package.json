@@ -1,8 +1,8 @@
 {
-  "name": "test-dot-quiver",
+  "name": "workflow-sample",
   "version": "1.0.1",
   "type": "module",
-  "description": "dot-quiver use case",
+  "description": "This repository provides an application sample for graph handling of Flowbuild artifact 'blueprint' ",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
