@@ -5,4 +5,4 @@ This repository provides an application use case sample of library [dot-quiver](
 1. Run on command ```npm install && npm start```
 2. Type on URL field ```localhost:8080```
 
-The result rendering depends on browser. 
+The result rendering depends on browser.
