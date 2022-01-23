@@ -16,4 +16,4 @@ Afterwards, you may place the desired _blueprints_ on path ```$WORKFLOW_SAMPLE_P
 
 The result rendering depends on browser. 
 
-The available functions for Workflow are [in this file](https://github.com/dot-quiver/dot-quiver-api/blob/master/utils/workflow/parsers.js). You must edit the file ```index.js``` to explore the funcionalities.
+The available functions for Workflow are [in this file](https://github.com/dot-quiver/dot-quiver-api/blob/master/utils/workflow/parsers.js). You must edit the file ```index.js``` to explore the available funcionalities.
