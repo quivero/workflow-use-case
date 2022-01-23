@@ -1,6 +1,6 @@
 # Workflow use-case sample for Library ```dot-quiver```
 
-This repository provides an application use case sample of library [dot-quiver](https://github.com/brunolnetto/dot-quiver) to handle [FlowBuild API](https://github.com/flow-build) artifact **blueprint**. It is a NodeJS application. Hence, to start it, you might:
+This repository provides an application use case sample of library [dot-quiver](https://github.com/brunolnetto/dot-quiver) to handle [FlowBuild API](https://github.com/flow-build) artifact **blueprint**. It is a NodeJS application. Hence, you might follow the instructions below to start it:
 
 ## How to use
 
@@ -14,4 +14,6 @@ Afterwards, you may place the desired _blueprints_ on path ```$ROOT_PATH/samples
 1. Run the command ```npm start```; 
 2. Run the following command on the broser URL field ```localhost:8080```.
 
-The result rendering depends on browser.
+The result rendering depends on browser. 
+
+The available functions for Workflow are [in this file](https://github.com/dot-quiver/dot-quiver-api/blob/master/utils/workflow/parsers.js).
