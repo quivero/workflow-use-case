@@ -1,8 +1,9 @@
 // [START app]
 import express from 'express';
+import fs from 'fs';
 import { createRequire } from 'module';
 
-import parseBlueprintToGraph from 'dot-quiver/utils/workflow/parsers.js';
+import { parseBlueprintToGraph } from 'dot-quiver/utils/workflow/parsers.js';
 
 const require = createRequire(import.meta.url);
 const app = express();
@@ -26,7 +27,7 @@ app.get('/', (req, res) => {
   const bps_root = './samples/blueprints/';
   const blueprints_fnames = fs.readdirSync(bps_root);
 
-  // Change to true  VVVVV to describe all blueprints on path samples/blueprints/
+  // Change to true    VVVVV to describe all blueprints on path samples/blueprints/
   const READ_ALL_BPS = false;
   const blueprint_fname = 'DemandasEspontaneas.json';
 
