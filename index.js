@@ -1,15 +1,15 @@
 // [START app]
-import express from 'express'
-import { createRequire } from "module";
+import express from 'express';
+import { createRequire } from 'module';
 
-import parseBlueprintToGraph from 'dot-quiver/utils/workflow/parsers.js'
+import parseBlueprintToGraph from 'dot-quiver/utils/workflow/parsers.js';
 
 const require = createRequire(import.meta.url);
 const app = express();
 
 // [START enable_parser]
 // This middleware is available in Express v4.16.0 onwards
-app.use(express.json({extended: true}));
+app.use(express.json({ extended: true }));
 // [END enable_parser]
 
 // Listen to the App Engine-specified port, or 8080 otherwise
@@ -22,37 +22,36 @@ app.listen(PORT, () => {
 app.get('/', (req, res) => {
   // Driver program
   // Create a sample graph
-  
-  let bps_root = './samples/blueprints/';
-  let blueprints_fnames = fs.readdirSync(bps_root);
-  
+
+  const bps_root = './samples/blueprints/';
+  const blueprints_fnames = fs.readdirSync(bps_root);
+
   // Change to true  VVVVV to describe all blueprints on path samples/blueprints/
-  let READ_ALL_BPS = false;
-  let blueprint_fname = 'DemandasEspontaneas.json'
+  const READ_ALL_BPS = false;
+  const blueprint_fname = 'DemandasEspontaneas.json';
 
-  let graphs = []
-  let descriptions = []
+  const graphs = [];
+  const descriptions = [];
 
-  if(READ_ALL_BPS){
-      for(let i=0; i<blueprints_fnames.length; i++){
-          let fname = bps_root+blueprints_fnames[i];
-          let blueprint_i = require(fname);
-          
-          let graph_i = parseBlueprintToGraph(blueprint_i);
-          
-          graphs.push(graph_i);
-          descriptions.push(graph_i.describe());
-      }
+  if (READ_ALL_BPS) {
+    for (let i = 0; i < blueprints_fnames.length; i++) {
+      const fname = bps_root + blueprints_fnames[i];
+      const blueprint_i = require(fname);
 
-      res.send(descriptions);
+      const graph_i = parseBlueprintToGraph(blueprint_i);
 
+      graphs.push(graph_i);
+      descriptions.push(graph_i.describe());
+    }
+
+    res.send(descriptions);
   } else {
-      let fname = bps_root+blueprint_fname;
-      let blueprint_i = require(fname);
-      
-      let graph = parseBlueprintToGraph(blueprint_i);
-    
-      res.send(graph.describe());
+    const fname = bps_root + blueprint_fname;
+    const blueprint_i = require(fname);
+
+    const graph = parseBlueprintToGraph(blueprint_i);
+
+    res.send(graph.describe());
   }
 });
 // [END app]
