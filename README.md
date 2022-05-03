@@ -11,4 +11,4 @@ First of all, run the command ```npm install``` to install the package.json pack
 
 The result rendering depends on chosen browser. 
 
-The available functions for Workflow are [in this file](https://github.com/dot-quiver/dot-quiver-api/blob/master/utils/workflow/parsers.js). You must edit the file ```index.js``` to explore the available funcionalities.
+The available functions for Workflow are [in this file](https://github.com/dot-quiver/dot-quiver-api/blob/master/utils/workflow/parsers.js). You must edit the file ```/src/index.js``` to explore the available funcionalities.
