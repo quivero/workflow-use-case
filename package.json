@@ -18,7 +18,7 @@
     "dot-quiver": "^6.0.0",
     "es-iter": "^1.1.2",
     "express": "^4.17.3",
-    "fs": "^0.0.1-security",
+    "fs": "^0.0.2",
     "lodash.combinations": "^18.10.0",
     "nodemon": "^2.0.15"
   },
