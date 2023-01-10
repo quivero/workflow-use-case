@@ -1,4 +1,4 @@
-# Workflow use-case sample for library ```prego```
+# Workflow use-case sample for ```prego```
 
 This repository provides an application use case sample of library [prego](https://github.com/quivero/prego) to handle [FlowBuild API](https://github.com/flow-build) artifact **blueprint**. It is a NodeJS application. Hence, you might follow the instructions below to start it.
 
