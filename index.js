@@ -3,7 +3,7 @@ import express from 'express';
 import fs from 'fs';
 import { createRequire } from 'module';
 
-import { parseBlueprintToGraph } from 'dot-quiver/utils/workflow/parsers.js';
+import { parseBlueprintToGraph } from 'quivero-api/utils/workflow/parsers.js';
 
 const require = createRequire(import.meta.url);
 const app = express();

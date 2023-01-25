@@ -1,6 +1,6 @@
-# Workflow use-case sample for Library ```quivero```
+# Workflow use-case sample for ```prego```
 
-This repository provides an application use case sample of library [quivero](https://github.com/brunolnetto/quivero) to handle [FlowBuild API](https://github.com/flow-build) artifact **blueprint**. It is a NodeJS application. Hence, you might follow the instructions below to start it.
+This repository provides an application use case sample of library [prego](https://github.com/quivero/prego) to handle [FlowBuild API](https://github.com/flow-build) artifact **blueprint**. It is a NodeJS application. Hence, you might follow the instructions below to start it.
 
 ## How to use
 
@@ -11,4 +11,4 @@ First of all, run the command ```npm install``` to install the package.json pack
 
 The result rendering depends on chosen browser. 
 
-The available functions for Workflow are [in this file](https://github.com/quivero/quivero-api/blob/main/utils/workflow/parsers.js). You must edit the file ```/src/index.js``` to explore the available funcionalities.
+The available functions for Workflow are [in this file](https://github.com/quivero/prego/blob/master/utils/workflow/parsers.js). You must edit the file ```/src/index.js``` to explore the available funcionalities.
